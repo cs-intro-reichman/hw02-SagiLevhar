@@ -5,6 +5,30 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		//// Put your code here
+		
+		double RandomNum = Math.random();
+		char FirstGender = ' ', NextGender = ' ';
+		int counter = 1;
+		if (RandomNum > 0.5){
+			FirstGender = 'b';
+		} else {
+			FirstGender = 'g';
+		}
+		System.out.print(FirstGender + " ");
+		NextGender = FirstGender;
+		
+		while (NextGender == FirstGender){
+			RandomNum = Math.random();
+			if (RandomNum > 0.5){
+				NextGender = 'b';
+			} 	else {
+				NextGender = 'g';
+			}
+			System.out.print(NextGender + " ");
+			counter ++;
+		}
+		System.out.println();
+		System.out.println("you made it... and you have " + counter + " childrens." );
+
 	}
 }
